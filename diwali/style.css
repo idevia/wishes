@@ -7,7 +7,7 @@ body {
 }
 
 .container {
-  height: 200px;
+  height: 300px;
   width: 600px;
   position: fixed;
   top: 0;
@@ -244,5 +244,26 @@ a#menu-share:hover + ul {
   visibility: visible;
   -webkit-animation: scale-in 0.5s;
           animation: scale-in 0.5s;
+}
+
+@media (max-width: 800px) and (orientation: portrait) {
+  .message {
+    width: 100vw;
+    height: 100vh;
+    background: #212121;
+    z-index: 111111111111;
+    position: fixed;
+  }
+  .message .msg {
+    position: absolute;
+    font-size: 2rem;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
 }
 /*# sourceMappingURL=style.css.map */
