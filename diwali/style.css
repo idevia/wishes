@@ -4,6 +4,7 @@ body {
   padding: 0;
   font-family: 'Sacramento', cursive;
   background-color: #212121;
+  min-height: 100vh;
 }
 
 .container {
