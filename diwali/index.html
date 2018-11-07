@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Happy Diwali</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="to-container">
+            Dear
+            <span id="to"></span>,
+        </div>
+        <div class="title">Happy Diwali</div>
+
+        <ul class="diwali">
+            <li><span></span></li>
+            <li><span></span></li>
+            <li><span></span></li>
+            <li><span></span></li>
+            <li><span></span></li>
+            <li><span></span></li>
+        </ul>
+        <div class="from-container"><a class="idevia" target="_blank" href="https://idevia.in">iDevia</a> loves you</div>
+    </div>
+    <a href="#" class="float" id="menu-share">
+        <i class="fa fa-share my-float"></i>
+    </a>
+    
+    <ul class="tools">
+        <li>
+            <a href="#" class="js-whatsapp-share" data-action="share/whatsapp/share">
+                <i class="fa fa-whatsapp my-float"></i>
+            </a>
+        </li>
+        <!-- <li>
+          <a href="#">
+            <i class="fa fa-google-plus my-float"></i>
+          </a>
+        </li> -->
+        <li>
+            <a href="/diwali">
+                <i class="fa fa-plus my-float"></i>
+            </a>
+        </li>
+    </ul>
+
+    <script>
+        function getParam(name) {
+            name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+            var regexS = "[\\?&]" + name + "=([^&#]*)";
+            var regex = new RegExp(regexS);
+            var results = regex.exec(window.location.href);
+            if (results == null)
+                return "";
+            else
+                return results[1];
+        }
+        var name = getParam('n');
+        if (name) {
+            name = name.split('+').join(' ');
+        } else {
+            setTimeout(function () {
+                name = prompt("Please Enter Your Name");
+                window.location = '/diwali/?n=' + name.split(' ').join('+');
+            }, 500)
+        }
+        var el = document.getElementById('to');
+        el.innerHTML = name;
+        el.setAttribute('data-text', name);
+
+        var whatsAppShare = document.querySelector('.js-whatsapp-share');
+            whatsAppShare.setAttribute('href', 'whatsapp://send?text=https://idevia.github.io/wishes?n=' + name.toLowerCase());
+    </script>
+</body>
+</html>
