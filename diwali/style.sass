@@ -14,9 +14,9 @@ body
   position: absolute
   top: 50%
   left: 50%
+  overflow-y: auto
   transform: translate(-50%, -50%)
   margin: auto
-  overflow-y: auto
   text-align: center
 
   .title
@@ -85,6 +85,7 @@ body
   // top: 20px
   // left: 20px
   // color: rgba(255,255,255,0.5)
+  padding-top: 20px;
   text-align: center
   text-shadow: 0px 2px 1px orange, 0px 0px 6px orangered, 0px 5px 10px rgba(0,0,0,0.1)
   text-align: center
@@ -186,6 +187,9 @@ a#menu-share:hover + ul
   visibility: visible
   animation: scale-in 0.5s
 
+@media (min-width: 800px)
+  .container
+    overflow-y: visible
 @media (max-width: 800px) and (orientation: portrait)
   .message
     width: 100%

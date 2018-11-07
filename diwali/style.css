@@ -13,10 +13,10 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
+  overflow-y: auto;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   margin: auto;
-  overflow-y: auto;
   text-align: center;
 }
 
@@ -110,6 +110,7 @@ body {
 }
 
 .to-container, .from-container {
+  padding-top: 20px;
   text-align: center;
   text-shadow: 0px 2px 1px orange, 0px 0px 6px orangered, 0px 5px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -247,6 +248,12 @@ a#menu-share:hover + ul {
   visibility: visible;
   -webkit-animation: scale-in 0.5s;
           animation: scale-in 0.5s;
+}
+
+@media (min-width: 800px) {
+  .container {
+    overflow-y: visible;
+  }
 }
 
 @media (max-width: 800px) and (orientation: portrait) {
