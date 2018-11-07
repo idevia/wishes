@@ -65,7 +65,7 @@
         } else {
             setTimeout(function () {
                 name = prompt("Please Enter Your Name");
-                window.location = '/diwali/?n=' + name.split(' ').join('+');
+                window.location = '/wishes/diwali/?n=' + name.split(' ').join('+');
             }, 500)
         }
         var el = document.getElementById('to');
@@ -73,7 +73,7 @@
         el.setAttribute('data-text', name);
 
         var whatsAppShare = document.querySelector('.js-whatsapp-share');
-            whatsAppShare.setAttribute('href', 'whatsapp://send?text=https://idevia.github.io/wishes?n=' + name.toLowerCase());
+            whatsAppShare.setAttribute('href', 'whatsapp://send?text=https://idevia.github.io/wishes/diwali?n=' + name.toLowerCase());
     </script>
 </body>
 </html>
